@@ -1,0 +1,6 @@
+# Ignore local folders
+.idea/
+.venv/
+
+# Ignore local files
+.DS_Store
