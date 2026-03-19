@@ -20,7 +20,7 @@ csce-4050-5050_group-3/
 - Dependencies ()
 ```
 
-## Task 1. Setting Up REST Server/Client.
+## Task 1: Setting Up REST Server/Client.
 
 ### Wireshark interface before running the server and client program
 ![Wireshark interface](./Screenshots/wireshark capturing traffic on loopback address.png)
@@ -52,6 +52,26 @@ $ python3 client.py
 ### HTTP Stream showing the data that the client got from the server
 
 ![HTTP Stream showing response](./Screenshots/http%20stream%20showing%20the%20data%20client%20received%20from%20server.png)
+
+## Task 2: Confidentiality and Data Integrity in the Symmetric Setting
+
+After implementing encryption and decryption logics to the project to provide Confidentiality, we used Wireshark to capture the communication between the client and the server.
+
+### Screenshot showing the server running
+
+![Server running](./Screenshots/server%20running_2.png)
+
+### Screenshot showing the client getting the data in plaintext
+
+![Client recieves data](./Screenshots/client%20gets%20data%20from%20the%20server_2.png)
+
+### Wireshark captured client-server communication
+
+![Wireshark captured encrypted communication](./Screenshots/Wireshark%20intercepted%20commincation%20between%20client%20server.png)
+
+### HTTP Stream showing the encrypted data that the client received
+
+![HTTP stream shows encrypted data](./Screenshots/HTTP%20stream%20shows%20the%20encrypted%20data.png)
 
 ## Note
 
