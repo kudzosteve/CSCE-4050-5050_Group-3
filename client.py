@@ -1,6 +1,7 @@
 from cryptography.hazmat.primitives.ciphers.aead import ChaCha20Poly1305
 import requests
 import json
+import hmac, hashlib
 
 API_URL = 'http://127.0.0.1:5050'
 
@@ -10,7 +11,7 @@ def decrypt(data:bytes, nonce:bytes):
     cipher = ChaCha20Poly1305(bytes.fromhex(KEY))
     return cipher.decrypt(nonce, data, None)
 
-def get_weather():
+def get_weather_decrypted():
     the_url = f'{API_URL}/weather'
     response = requests.get(url=the_url)
     if response.status_code == 200:
@@ -24,6 +25,30 @@ def get_weather():
         return data
     else:
         return 'Failed to get data'
+    
+def get_weather_macd():
+    the_url = f'{API_URL}/weather'
+    response = requests.get(url=the_url)
+    if response.status_code == 200:
+        # Fetch the data and the signature
+        the_data = response.json()['data']
+        the_signature = response.json()['signature']
+
+        # Create a HMAC signature of the data and compare it to the signature from the server
+        signature = hmac.new(bytes.fromhex(KEY), the_data.encode(), hashlib.sha256).hexdigest()
+        if hmac.compare_digest(signature, the_signature):
+            # If the signatures match, return the data as a dictionary
+            data = json.loads(the_data)
+            return data
+        else:
+            return 'Data integrity check failed'
+    else:
+        return 'Failed to get data'
+    
+def get_weather():
+    # You can switch between the two methods by commenting/uncommenting the appropriate line
+    # return get_weather_decrypted()
+    return get_weather_macd()
 
 def main():
     print(get_weather())
