@@ -1,7 +1,7 @@
 # CSCE-4050-5050_Group-3
 
 ## Description
-A REST server with one endpoint, “/weather”, that returns a static, hardcoded JSON reply.
+A REST server with one endpoint, “/weather”, that returns a static, hardcoded JSON reply. All task-related screenshots are saved in /Screenshots
 
 ## Repository Structure
 ```text
