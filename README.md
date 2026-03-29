@@ -73,6 +73,24 @@ After implementing encryption and decryption logics to the project to provide Co
 
 ![HTTP stream shows encrypted data](./Screenshots/HTTP%20stream%20shows%20the%20encrypted%20data.png)
 
-## Note
+## Task 3
 
-The repository will be updated as the project progresses.
+### Screen showing the generated keys and the server running afterwards
+
+![Key pair and server running](./Screenshots/3_key%20pair%20generated%20and%20server%20running.png)
+
+### Screenshot showing the client getting the data in plaintext
+
+![Client retrieves data](./Screenshots/3_client%20gets%20the%20data%20in%20plaintext.png)
+
+### HTTP Stream showing the server's public key
+
+![Server's public key](./Screenshots/3_HTTP%20stream%20shows%20server's%20public%20key.png)
+
+### HTTP Stream showing the client's encrypted session key
+
+![Encrypted session key](./Screenshots/3_HTTP%20stream%20shows%20encrypted%20session%20key.png)
+
+### HTTP Stream showing the encrypted data and the signature
+
+![Encrypted data and signature](./Screenshots/3_HTTP%20stream%20shows%20encrypted%20data%20and%20signature.png)
