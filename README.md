@@ -75,6 +75,9 @@ After implementing encryption and decryption logics to the project to provide Co
 
 ## Task 3
 
+Run the server using: python server_kx.py
+Client: client_kx.py
+
 ### Screen showing the generated keys and the server running afterwards
 
 ![Key pair and server running](./Screenshots/3_key%20pair%20generated%20and%20server%20running.png)
@@ -94,3 +97,8 @@ After implementing encryption and decryption logics to the project to provide Co
 ### HTTP Stream showing the encrypted data and the signature
 
 ![Encrypted data and signature](./Screenshots/3_HTTP%20stream%20shows%20encrypted%20data%20and%20signature.png)
+
+## Task 4
+
+To run the server use: python server_ca.py
+To run the client use: python client_ca.py
